@@ -1,5 +1,3 @@
-import Decomposer from './src/decomposer.js';
-import Component from './src/writer-component.js';
-import Writer from './src/writer.js';
-
-export default { Decomposer, Component, Writer };
+export { Decomposer } from './src/decomposer.js';
+export { WriterComponent } from './src/writer-component.js';
+export { Writer } from './src/writer.js';
