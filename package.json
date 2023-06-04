@@ -2,7 +2,7 @@
   "name": "@human-writes/core",
   "packageManager": "yarn@3.5.1",
   "type": "module",
-  "version": "0.5.52",
+  "version": "0.5.53",
   "description": "Write HTML and code snippet like a human",
   "exports": {
     ".": {
@@ -12,6 +12,9 @@
       }
     }
   },
+  "files": [
+    "src/*"
+  ],
   "scripts": {
     "dev": "webpack --config webpack.config.js",
     "build": "gulp -f gulpfile.js",
