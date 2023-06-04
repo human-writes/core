@@ -26,6 +26,10 @@
     "type": "git",
     "url": "git@github.com:human-writes/core.git"
   },
+  "bugs": {
+    "url": "https://github.com/human-writes/core/issues"
+  },
+  "homepage": "https://github.com/human-writes/core#readme",
   "types": "index.d.ts",
   "main": "index.js",
   "release": {

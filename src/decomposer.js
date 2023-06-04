@@ -640,4 +640,4 @@ class Decomposer {
     }
 }
 
-module.exports = Decomposer;
+export default Decomposer;
