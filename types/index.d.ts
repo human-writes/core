@@ -1,3 +1,9 @@
-export { Decomposer }  from "../src/decomposer";
-export { Writer } from "../src/writer";
-export { WriterComponent } from "../src/writer-component";
+import { Decomposer }  from "../src/decomposer";
+import { Writer } from "../src/writer";
+import { WriterComponent } from "../src/writer-component";
+
+declare module "@human-writes/core" {
+    export = Decomposer;
+    export = Writer;
+    export = WriterComponent;
+ }
