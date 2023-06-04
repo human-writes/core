@@ -12,6 +12,9 @@
       }
     }
   },
+  "files": [
+    "src/*"
+  ],
   "scripts": {
     "dev": "webpack --config webpack.config.js",
     "build": "gulp -f gulpfile.js",
