@@ -2,7 +2,7 @@
   "name": "@human-writes/core",
   "packageManager": "yarn@3.5.1",
   "type": "module",
-  "version": "0.5.53",
+  "version": "0.5.54",
   "description": "Write HTML and code snippet like a human",
   "exports": {
     ".": {
@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/human-writes/core#readme",
   "types": "index.d.ts",
+  "typings": "./typings, ./node_modules",
   "module": "@human-writes/core.d.ts",
   "main": "index.js",
   "release": {
