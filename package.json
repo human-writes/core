@@ -17,8 +17,8 @@
     }
   },
   "scripts": {
-    "dev": "webpack --config webpack.config.mjs",
-    "build": "gulp -f gulpfile.mjs",
+    "dev": "webpack --config webpack.config.js",
+    "build": "gulp -f gulpfile.js",
     "lint": "npx eslint --ext .mjs,.cjs,.js ./src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/human-writes/core#readme",
   "types": "index.d.ts",
+  "module": "@human-writes/core.d.ts",
   "main": "index.js",
   "release": {
     "branches": [
