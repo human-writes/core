@@ -2,7 +2,7 @@
   "name": "@human-writes/core",
   "packageManager": "yarn@3.5.1",
   "type": "module",
-  "version": "0.5.58",
+  "version": "0.5.59",
   "description": "Write HTML and code snippet like a human",
   "scripts": {
     "dev": "webpack --config webpack.config.js",
@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/human-writes/core#readme",
   "types": "./types/index.d.ts",
-  "typings": "./types, ./node_modules",
+  "typings": "./types",
   "module": "./index.ts",
   "main": "index.js",
   "release": {
