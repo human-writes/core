@@ -40,4 +40,4 @@ Go to https://human-writes.io/ to see how they work. Look at the page source to 
 
 ## Installation
 
-Please, refer to modules @human-writes/text-writer and  @human-writes/code-writer.
+Please, refer to module @human-writes/web-components to actually use these features.
