@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/human-writes/core#readme",
   "types": "index.d.ts",
+  "typings": "./typings, ./node_modules",
   "module": "@human-writes/core.d.ts",
   "main": "index.js",
   "release": {

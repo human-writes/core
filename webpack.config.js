@@ -21,7 +21,7 @@ export default {
     module: {
         rules: [
             {
-                test: /\.mjs$/,
+                test: /\.js$/,
                 exclude: /(node_modules)/,
                 use: {
                     loader: "babel-loader",
