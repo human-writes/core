@@ -2,7 +2,7 @@
   "name": "@human-writes/core",
   "packageManager": "yarn@3.5.1",
   "type": "module",
-  "version": "0.5.57",
+  "version": "0.5.58",
   "description": "Write HTML and code snippet like a human",
   "scripts": {
     "dev": "webpack --config webpack.config.js",
