@@ -2,16 +2,8 @@
   "name": "@human-writes/core",
   "packageManager": "yarn@3.5.1",
   "type": "module",
-  "version": "0.5.57",
+  "version": "0.5.58",
   "description": "Write HTML and code snippet like a human",
-  "exports": {
-    ".": {
-      "types": "./types/index.d.ts"
-    }
-  },
-  "files": [
-    "src/**/*"
-  ],
   "scripts": {
     "dev": "webpack --config webpack.config.js",
     "build": "gulp -f gulpfile.js",
@@ -26,9 +18,9 @@
     "url": "https://github.com/human-writes/core/issues"
   },
   "homepage": "https://github.com/human-writes/core#readme",
-  "types": "./index.d.ts",
-  "typings": "./typings, ./node_modules",
-  "module": "./index.d.ts",
+  "types": "./types/index.d.ts",
+  "typings": "./types, ./node_modules",
+  "module": "./index.ts",
   "main": "index.js",
   "release": {
     "branches": [
