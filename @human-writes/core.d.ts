@@ -1,7 +1,7 @@
 declare module "@human-writes/core";
 
-const Decomposer = require('./src/decomposer');
-const Component = require('./src/writer-component');
-const Writer = require('./src/writer');
+import Decomposer from './src/decomposer.js';
+import Component from './src/writer-component.js';
+import Writer from './src/writer.js';
 
-module.exports = { Decomposer, Component, Writer };
+export default { Decomposer, Component, Writer };
