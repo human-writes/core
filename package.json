@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/human-writes/core#readme",
   "types": "./types/index.d.ts",
-  "typings": "./types, ./node_modules",
+  "typings": "./types",
   "module": "./index.ts",
   "main": "index.js",
   "release": {
