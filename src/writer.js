@@ -7,7 +7,7 @@ const CLOSE_TAG = ">";
 const TERMINATOR = "/";
 const LF = "\n";
 
-class Writer {
+export default class Writer {
     #parent = null;
 
     constructor(parent) {
@@ -545,5 +545,3 @@ class Writer {
         this.#parent.setAttribute("finished", "true");
     }
 }
-
-export default Writer;

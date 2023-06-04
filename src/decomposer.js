@@ -2,7 +2,7 @@ const OPEN_TAG = "&lt;";
 const CLOSE_TAG = "&gt;";
 const TERMINATOR = "/";
 
-class Decomposer {
+export default class Decomposer {
     #list = [];
     #text = "";
     #workingText = "";
@@ -639,5 +639,3 @@ class Decomposer {
         this.#list = list;
     }
 }
-
-export default Decomposer;

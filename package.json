@@ -1,18 +1,14 @@
 {
   "name": "@human-writes/core",
   "packageManager": "yarn@3.5.1",
-  "type": "commonjs",
-  "version": "0.5.51",
+  "type": "module",
+  "version": "0.5.52",
   "description": "Write HTML and code snippet like a human",
   "exports": {
     ".": {
       "import": {
         "types": "./index.d.ts",
         "default": "./index.mjs"
-      },
-      "require": {
-        "types": "./index.d.ts",
-        "default": "./index.js"
       }
     }
   },

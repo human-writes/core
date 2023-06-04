@@ -1,4 +1,4 @@
-class WriterComponent extends HTMLElement {
+export default class WriterComponent extends HTMLElement {
     constructor() {
         super();
     }
@@ -107,5 +107,3 @@ class WriterComponent extends HTMLElement {
 
     writeLikeAHuman() {}
 }
-
-export default WriterComponent;
