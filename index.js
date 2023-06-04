@@ -1,5 +1,5 @@
-const Decomposer = require('./src/decomposer');
-const Component = require('./src/component');
-const Writer = require('./src/writer');
+import Decomposer from './src/decomposer';
+import Writer from './src/writer';
+import WriterComponent from './src/component';
 
-module.exports = { Decomposer, Component, Writer };
+export default { Decomposer, Writer, WriterComponent };

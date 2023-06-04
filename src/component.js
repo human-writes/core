@@ -108,4 +108,4 @@ class WriterComponent extends HTMLElement {
     writeLikeAHuman() {}
 }
 
-module.exports = WriterComponent;
+export default WriterComponent;

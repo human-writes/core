@@ -5,8 +5,8 @@
   "version": "0.5.50",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --config webpack.config.mjs",
-    "build": "gulp -f gulpfile.mjs",
+    "dev": "webpack --config webpack.config.js",
+    "build": "gulp -f gulpfile.js",
     "lint": "npx eslint --ext .mjs,.cjs,.js ./src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,7 +14,7 @@
     "type": "git",
     "url": "git@github.com:human-writes/core.git"
   },
-  "type": "commonjs",
+  "type": "module",
   "module": "index.js",
   "keywords": [
     "HTML",

@@ -1,4 +1,4 @@
-const Decomposer = require("./decomposer.js");
+import Decomposer from "./decomposer.js";
 
 const ENCODED_OPEN_TAG = "&lt;";
 const ENCODED_CLOSE_TAG = "&gt;";
@@ -546,4 +546,4 @@ class Writer {
     }
 }
 
-module.exports = Writer;
+export default Writer;
