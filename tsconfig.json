@@ -1,23 +1,11 @@
 {
-    "compilerOptions": {
-      "outDir": "./dist",
-      "noImplicitAny": true,
-      "sourceMap": false,
-      "allowJs": true,
-      "target": "esnext",
-      "experimentalDecorators": true,
-      "lib": ["dom", "esnext"],
-      "module": "esnext",
-      "moduleResolution": "node",
-      "strict": true,
-      "noEmit": true,
-      "paths": {
-        "core": ["./types/index.d.ts"]
-      }
-    },
-    "include": [
-      "src/**/*",
-      "index.ts"
-    ],
-    "compileOnSave": false
+  // Change this to match your project
+  "include": ["src/**/*"],
+  "compilerOptions": {
+    "allowJs": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "dist",
+    "declarationMap": true
+  }
 }

@@ -2,15 +2,15 @@
 
 ## What does it do?
 
-HumanWrites goal is to imitate the human writing style on a keyboard via a component set on a web app.
+HumanWrites puropse is to imitate the human writing style on a keyboard via a component set on a web app.
 
 However, this package does actually nothing. It only contains library files to be imported from.
 
 ## Contents of the package
 
-- Decomposer: transforms an encoded HTML text composed of tags in an ordered list of objects. 
-- Writer: loops through the text from the first to the last character and determines an action accordingly to the character and options passed.
-- Component: it's a base class to make a web compoenent.
+Files exposed by this package to be inherited in other packages consist in:
+- Decomposer: it transforms an encoded HTML text composed of tags in an ordered list of objects. 
+- Writer: it loops through the text from the first to the last character and determines an action accordingly to the character and options passed.
 
 ## Features
 
@@ -41,3 +41,13 @@ Go to https://human-writes.io/ to see how they work. Look at the page source to 
 ## Installation
 
 Please, refer to module @human-writes/web-components to actually use these features.
+
+## Changelog
+
+v0.5.60 - Fixes declaration types for package dependencies.
+
+## Roadmap
+
+- Asap: implement a Vue plugin
+- A little later: implement a React plugin
+- When I have time: implement an Angular plugin
