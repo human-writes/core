@@ -1,15 +1,15 @@
-# Human Writes
+# HumanWrites/Core
 
 ## What does it do?
 
 HumanWrites puropse is to imitate the human writing style on a keyboard via a component set on a web app.
 
-However, this package does actually nothing. It only contains library files to be imported from.
+However, this package does actually nothing. It only contains library files to be imported.
 
 ## Contents of the package
 
-Files exposed by this package to be inherited in other packages consist in:
-- Decomposer: it transforms an encoded HTML text composed of tags in an ordered list of objects. 
+The files exposed by this package consist in:
+- Decomposer: it transforms an HTML encoded text composed of tags in an ordered list of objects. 
 - Writer: it loops through the text from the first to the last character and determines an action accordingly to the character and options passed.
 
 ## Features
@@ -26,12 +26,11 @@ Writes HTML text inside a _pre_ tag embedding a _code_ tag for the decoration. W
 
 It supports code highlighting thanks to HighlightJS library integration. All resources of the HighlightJS library are requested inside the webcomponent, so you do not have to worry about them.
 
-### Commaon features
+### Common features
 
-Both components also propose to:
-- make mistakes :angry:
-- correct mistakes right away :smile:
-- chain each other with the parameter _depends-on-selector_, eg: with 2 components if the second references the first it starts when the first finishes.
+Both writers also propose to:
+- make typos :angry:
+- correct typos right away :smile:
 - write at random speed. The speed is computed from 25% faster to 75% slower than the given speed parameter.  
 
 ## Live demo
@@ -40,14 +39,20 @@ Go to https://human-writes.io/ to see how they work. Look at the page source to 
 
 ## Installation
 
-Please, refer to module @human-writes/web-components to actually use these features.
+Please, refer to module [@human-writes/web-components](https://www.npmjs.com/package/@human-writes/web-components) to actually use these features.
 
 ## Changelog
+
+v0.5.61 - Fixes README.
 
 v0.5.60 - Fixes declaration types for package dependencies.
 
 ## Roadmap
 
-- Asap: implement a Vue plugin
-- A little later: implement a React plugin
-- When I have time: implement an Angular plugin
+Today only web components can be used as an implementation of this library. 
+
+New implementations are coming:
+
+- asap: a Vue plugin
+- a little later: a React plugin
+- when I have time: an Angular plugin
