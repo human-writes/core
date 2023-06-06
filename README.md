@@ -26,7 +26,7 @@ Writes HTML text inside a _pre_ tag embedding a _code_ tag for the decoration. W
 
 It supports code highlighting thanks to HighlightJS library integration. All resources of the HighlightJS library are requested inside the webcomponent, so you do not have to worry about them.
 
-### Commaon features
+### Common features
 
 Both components also propose to:
 - make mistakes :angry:
