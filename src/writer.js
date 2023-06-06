@@ -1,4 +1,4 @@
-import Decomposer from "./decomposer.js";
+import { Decomposer } from "./decomposer.js";
 
 const ENCODED_OPEN_TAG = "&lt;";
 const ENCODED_CLOSE_TAG = "&gt;";
@@ -545,5 +545,3 @@ export class Writer {
         this.#parent.setAttribute("finished", "true");
     }
 }
-
-export default Writer;

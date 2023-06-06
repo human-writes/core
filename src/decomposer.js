@@ -639,6 +639,3 @@ export class Decomposer {
         this.#list = list;
     }
 }
-
-
-export default Decomposer;

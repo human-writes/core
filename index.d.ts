@@ -1,11 +1,8 @@
-declare module "@human-writes/core";
 
-import { Decomposer } from './types/decomposer'
-import { Writer } from './types/writer'
-import { WriterComponent } from './types/writer-component'
+import Decomposer from './types/decomposer'
+import Writer from './types/writer'
 
-export {
-    Decomposer,
-    Writer,
-    WriterComponent
+declare module "@human-writes/core" {
+    export = Decomposer;
+    export = Writer;
 }
