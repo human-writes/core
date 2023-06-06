@@ -29,6 +29,10 @@ export default {
                         presets: ["@babel/preset-env"]
                     }
                 }
+            },
+            { 
+                test: /\.([cm]?ts|tsx)$/, 
+                loader: "ts-loader" 
             }
         ]
     },
