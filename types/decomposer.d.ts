@@ -1,5 +1,5 @@
 export class Decomposer {
-    constructor(html: any, doMarkUpQuotes?: boolean);
+    constructor(html: string, doMarkUpQuotes?: boolean);
     get list(): object[];
     get text(): string;
     get workingText(): string;
@@ -46,6 +46,5 @@ export class Decomposer {
     };
     replaceTags(text: string, tags: object[]): string;
     doComponents(rule?: string): void;
-    #private;
 }
 

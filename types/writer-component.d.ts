@@ -1,4 +1,5 @@
 export class WriterComponent extends HTMLElement {
+    super: HTMLElement;
     static get observeAttributes(): string[];
     get source(): string;
     get speed(): number | 60;
@@ -11,4 +12,3 @@ export class WriterComponent extends HTMLElement {
     connectedCallback(): Promise<void>;
     writeLikeAHuman(): void;
 }
-

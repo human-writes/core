@@ -1,7 +1,4 @@
 export class WriterComponent extends HTMLElement {
-    constructor() {
-        super();
-    }
 
     static get observeAttributes() {
         /**
