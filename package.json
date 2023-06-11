@@ -2,7 +2,7 @@
   "name": "@human-writes/core",
   "packageManager": "yarn@3.5.1",
   "type": "module",
-  "version": "0.5.61",
+  "version": "0.5.62",
   "description": "Write HTML and code snippet like a human",
   "scripts": {
     "build": "tsc",
