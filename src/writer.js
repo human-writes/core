@@ -8,21 +8,32 @@ const TERMINATOR = "/";
 const LF = "\n";
 
 export class Writer {
-    #parent = null;
+    #source = "";
+    #speed = 60;
+    #makeTypos = false;
 
-    constructor(parent) {
-        this.#parent = parent;
+    constructor(ownerDocument, source, speed, makeTypos, finishedCallback) {
+        this.#ownerDocument = ownerDocument;
+        this.#source = source;
+        this.#speed = speed;
+        this.#finishedCallback = finishedCallback;
+        this.#makeTypos = makeTypos;
     }
 
-    async writeLikeAHuman(target, source) {
-        const isCodeWriter = source !== undefined;
-        const sourceComponent = this.#parent.shadowRoot.querySelector(
-            `pre#${source} code`
+    #ownerDocument = () => {};
+
+    #finishedCallback = () => {};
+
+    async writeLikeAHuman(toWrite, toCopy) {
+        const isCodeWriter = toCopy !== undefined;
+        const sourceComponent = this.#ownerDocument.querySelector(
+            `pre#${toCopy} code`
         );
-        const targetComponent = this.#parent.shadowRoot.querySelector(
-            isCodeWriter ? `pre#${target} code` : `div#${target}`
+        const targetComponent = this.#ownerDocument.querySelector(
+            isCodeWriter ? `pre#${toWrite} code` : `div#${toWrite}`
         );
-        let speed = this.#parent.speed;
+
+        let speed = this.#speed;
         let reg = [];
         let html = "";
         let lastIndent = "";
@@ -54,7 +65,7 @@ export class Writer {
                 tail = tail.trim();
             }
 
-            speed = randomSpeed(the.#parent.speed);
+            speed = randomSpeed(the.#speed);
 
             html += c;
             targetComponent.innerHTML = html + tail;
@@ -192,7 +203,7 @@ export class Writer {
             return result;
         }
 
-        const codeSource = this.#parent.getAttribute("source") ?? "";
+        const codeSource = this.#source;
 
         if (isCodeWriter && window.hljs !== undefined) {
             window.hljs.highlightElement(sourceComponent);
@@ -230,7 +241,7 @@ export class Writer {
             }
 
             if (
-                this.#parent.makeMistakes &&
+                this.#makeTypos &&
                 decomposer.mistakes.length &&
                 decomposer.phraseStarts.length &&
                 decomposer.phraseStarts[0] === i
@@ -532,16 +543,12 @@ export class Writer {
         // Set back the code text in pure HTML
         html = translate(html);
 
-        // Raise an event outside the shadow DOM
-        // when all is done and ready
-        const finishedEvent = new CustomEvent("finishedWriting", {
-            bubbles: true,
-            composed: true,
-            detail: {
-                content: html
-            }
-        });
-        this.#parent.dispatchEvent(finishedEvent);
-        this.#parent.setAttribute("finished", "true");
+        this.finishedEvent(html);
+    }
+
+    finishedEvent(html) {
+        if (typeof this.#finishedCallback === "function") {
+            this.#finishedCallback.call(this, html);
+        }
     }
 }

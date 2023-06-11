@@ -1,50 +1,48 @@
 export class Decomposer {
-    constructor(html: string, doMarkUpQuotes?: boolean);
-    get list(): object[];
+    constructor(html: any, doMarkUpQuotes?: boolean);
+    get list(): any[];
     get text(): string;
     get workingText(): string;
-    get words(): string[];
-    get mistakes(): string[];
-    get mistakeCursors(): string[];
-    get phraseStarts(): string[];
-    get phraseLengths(): string[];
-    get wordEnds(): string[];
-    translateBracket(base: string, name: string, isClosing?: boolean): {
-        word: string;
+    get words(): any[];
+    get mistakes(): any[];
+    get mistakeCursors(): any[];
+    get phraseStarts(): any[];
+    get phraseLengths(): any[];
+    get wordEnds(): any[];
+    translateBracket(base: any, name: any, isClosing?: boolean): {
+        word: any;
         translated: boolean;
     };
     markupQuotes(): void;
     doAttributes(attributesText: any): {};
-    isClosedTag(tag: object): boolean;
-    isCloserTag(tag: object): boolean;
-    makeTag(tag: object, parentIds: number[], depth: number, hasCloser: boolean, isCloser?: boolean): {
-        id: number;
-        name: string;
-        text: string;
-        startsAt: number;
-        endsAt: number;
+    isClosedTag(tag: any): boolean;
+    isCloserTag(tag: any): boolean;
+    makeTag(tag: any, parentIds: any, depth: any, hasCloser: any, isCloser?: boolean): {
+        id: any;
+        name: any;
+        text: any;
+        startsAt: any;
+        endsAt: any;
         uid: () => number;
         method: string;
-        /**
-* @type {string[]}
-*/
-        props: string[];
-        depth: number;
-        hasCloser: boolean;
+        props: any[];
+        depth: any;
+        hasCloser: any;
         node: boolean;
         isSingle: boolean;
-        parentId: number;
+        parentId: any;
     };
     protect(): void;
-    collectTags(htmlText: string, rule?: string): string[];
-    collectWords(htmlText: string): void;
+    collectTags(htmlText: any, rule?: string): any[];
+    collectWords(htmlText: any): void;
     makeMistakes(): void;
     makeFaultyText(): void;
-    splitTags(allTags: object[]): {
-        regularTags: object[];
-        singleTags: object[];
+    splitTags(allTags: any): {
+        regularTags: any[];
+        singleTags: any[];
     };
-    replaceTags(text: string, tags: object[]): string;
+    replaceTags(text: any, tags: any): any;
     doComponents(rule?: string): void;
+    #private;
 }
-
+//# sourceMappingURL=decomposer.d.ts.map
