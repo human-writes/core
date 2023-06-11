@@ -1,5 +1,5 @@
-import { Decomposer } from "./dist/decomposer";
-import { Writer } from "./dist/writer";
+import { Decomposer } from "./decomposer";
+import { Writer } from "./writer";
 
 declare module "@human-writes/core" {
     export { Decomposer, Writer };
