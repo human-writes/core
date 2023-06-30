@@ -118,7 +118,7 @@ export class Writer {
 
         function makeEmptyText(text) {
             const lines = text.split("\n");
-            return "<br />".repeat(lines.length);
+            return "<br />\n".repeat(lines.length);
         }
 
         async function loadText(url) {
@@ -205,9 +205,6 @@ export class Writer {
 
         const codeSource = this.#source;
 
-        if (isCodeWriter && window.hljs !== undefined) {
-            window.hljs.highlightElement(sourceComponent);
-        }
         text = await loadText(codeSource);
 
         // Seek and destroy indents
@@ -224,7 +221,15 @@ export class Writer {
         );
 
         if (isCodeWriter) {
-            sourceComponent.innerHTML = makeEmptyText(text + "\n");
+            console.log({ sourceComponent });
+
+            const emptyText = makeEmptyText(text + "\n");
+            console.log({ emptyText });
+            sourceComponent.innerHTML = emptyText;
+
+            if (window.hljs !== undefined) {
+                window.hljs.highlightElement(sourceComponent);
+            }
         }
 
         const firstIndent = indents[indentCount] ?? "";
